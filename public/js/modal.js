@@ -302,6 +302,14 @@ window.ProductModal = (function () {
     if (contentEl) {
       contentEl.scrollTop = 0;
     }
+
+    // Load reviews into the modal
+    if (window.Reviews) {
+      var reviewsContainer = document.getElementById('modal-reviews');
+      if (reviewsContainer) {
+        window.Reviews.load(reviewsContainer.dataset.productId, reviewsContainer);
+      }
+    }
   }
 
   /**

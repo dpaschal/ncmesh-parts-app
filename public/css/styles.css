@@ -1160,6 +1160,218 @@ footer a:hover {
 }
 
 
+/* ── Reviews ── */
+.reviews-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.75rem;
+}
+
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.reviews-avg-stars {
+  color: #FBBF24;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.reviews-avg-number {
+  color: var(--text-bright);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.reviews-count {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.reviews-empty {
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.reviews-error {
+  color: #ef4444;
+  font-size: 0.9rem;
+}
+
+/* Review list */
+.reviews-list {
+  margin-bottom: 1.5rem;
+}
+
+.review {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.review-author {
+  color: var(--text-bright);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.review-stars {
+  color: #FBBF24;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.review-stars .star-filled {
+  color: #FBBF24;
+}
+
+.review-stars .star-half {
+  color: #FBBF24;
+  opacity: 0.6;
+}
+
+.review-stars .star-empty {
+  color: var(--text-dim);
+}
+
+.review-date {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+.review-title {
+  color: var(--text-bright);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 0.25rem;
+}
+
+.review-body {
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* Star display colors (in summaries and review list) */
+.star-filled {
+  color: #FBBF24;
+}
+
+.star-half {
+  color: #FBBF24;
+  opacity: 0.6;
+}
+
+.star-empty {
+  color: var(--text-dim);
+}
+
+/* Review form */
+.review-form {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.review-form h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.75rem;
+}
+
+/* Star picker */
+.star-picker {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.star-picker-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.15rem 0.1rem;
+  transition: color 0.15s, transform 0.15s;
+  line-height: 1;
+}
+
+.star-picker-btn:hover,
+.star-picker-btn.star-active {
+  color: #FBBF24;
+  transform: scale(1.15);
+}
+
+/* Review form inputs */
+.review-input {
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.9rem;
+  color: var(--text-bright);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 0.6rem;
+}
+
+.review-input:focus {
+  border-color: rgba(103, 234, 148, 0.5);
+  box-shadow: 0 0 12px rgba(103, 234, 148, 0.08);
+}
+
+.review-input::placeholder {
+  color: #4a5568;
+}
+
+.review-body-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.review-submit {
+  margin-top: 0.25rem;
+}
+
+/* Review messages */
+.review-message {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.review-message-success {
+  color: var(--green);
+}
+
+.review-message-error {
+  color: #ef4444;
+}
+
+
 /* ── Animations ── */
 
 @keyframes fadeInOut {
