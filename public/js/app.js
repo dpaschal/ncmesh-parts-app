@@ -53,6 +53,46 @@
       window.Wizard.init();
     }
 
+    // Handle wizard-complete event — resolve match-based kit items against catalog
+    var wizardEl = document.getElementById('wizard');
+    if (wizardEl) {
+      wizardEl.addEventListener('wizard-complete', function (e) {
+        var kitId = e.detail && e.detail.kitId;
+        if (!kitId || !window.KITS) return;
+
+        // Find the kit
+        var kit = null;
+        for (var k = 0; k < window.KITS.length; k++) {
+          if (window.KITS[k].id === kitId) { kit = window.KITS[k]; break; }
+        }
+        if (!kit || !kit.items) return;
+
+        // Resolve each kit item against allItems by partial name match
+        var resolvedItems = [];
+        for (var i = 0; i < kit.items.length; i++) {
+          var matchStr = kit.items[i].match.toLowerCase();
+          for (var j = 0; j < allItems.length; j++) {
+            var itemName = (allItems[j].item || '').toLowerCase();
+            if (itemName.indexOf(matchStr.toLowerCase()) !== -1) {
+              // Enrich with price from priceLookup if available
+              var enriched = allItems[j];
+              var lookup = priceLookup[allItems[j].item];
+              if (lookup && lookup.priceDisplay && (!enriched.price || enriched.price === '-')) {
+                enriched = Object.assign({}, allItems[j], { price: lookup.priceDisplay });
+              }
+              resolvedItems.push(enriched);
+              break;
+            }
+          }
+        }
+
+        // Render the result via the Wizard module
+        if (window.Wizard && typeof window.Wizard.renderMatchResult === 'function') {
+          window.Wizard.renderMatchResult(kit, resolvedItems);
+        }
+      });
+    }
+
     // Parse URL for shared wishlist
     if (window.Wishlist) {
       window.Wishlist.loadFromURL(allItems);
