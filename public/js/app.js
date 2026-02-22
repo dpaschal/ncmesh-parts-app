@@ -127,3 +127,86 @@
     }
   }
 })();
+
+
+// __ Populate Community Featured Section __
+(function () {
+  fetch('/api/parts')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var communityItems = [];
+      var categories = Object.keys(data);
+      for (var c = 0; c < categories.length; c++) {
+        var items = data[categories[c]];
+        for (var i = 0; i < items.length; i++) {
+          if (items[i].community) communityItems.push(items[i]);
+        }
+      }
+      if (communityItems.length === 0) return;
+
+      var section = document.getElementById('community-featured');
+      var grid = document.getElementById('community-featured-grid');
+      if (!section || !grid) return;
+
+      section.style.display = '';
+
+      for (var j = 0; j < communityItems.length; j++) {
+        var item = communityItems[j];
+        var card = document.createElement('div');
+        card.className = 'community-featured-card';
+
+        var info = document.createElement('div');
+        info.className = 'community-featured-card-info';
+
+        var name = document.createElement('div');
+        name.className = 'community-featured-card-name';
+        name.textContent = item.item;
+        info.appendChild(name);
+
+        if (item.communityMaker) {
+          var maker = document.createElement('div');
+          maker.className = 'community-featured-card-maker';
+          maker.textContent = 'by ' + item.communityMaker;
+          info.appendChild(maker);
+        }
+
+        if (item.notes) {
+          var desc = document.createElement('div');
+          desc.className = 'community-featured-card-desc';
+          desc.textContent = item.notes;
+          info.appendChild(desc);
+        }
+
+        card.appendChild(info);
+
+        if (item.communityLinks) {
+          var links = document.createElement('div');
+          links.className = 'community-featured-card-links';
+
+          if (item.communityLinks.discord) {
+            var dLink = document.createElement('a');
+            dLink.href = item.communityLinks.discord;
+            dLink.target = '_blank';
+            dLink.rel = 'noopener noreferrer';
+            dLink.className = 'community-link-discord';
+            dLink.textContent = 'Discord';
+            links.appendChild(dLink);
+          }
+
+          if (item.communityLinks.github) {
+            var gLink = document.createElement('a');
+            gLink.href = item.communityLinks.github;
+            gLink.target = '_blank';
+            gLink.rel = 'noopener noreferrer';
+            gLink.className = 'community-link-github';
+            gLink.textContent = 'GitHub';
+            links.appendChild(gLink);
+          }
+
+          card.appendChild(links);
+        }
+
+        grid.appendChild(card);
+      }
+    });
+})();

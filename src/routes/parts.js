@@ -1,13 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { parse } = require('csv-parse/sync');
-
-// Google Sheets published CSV URL
-const GOOGLE_SHEET_CSV =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vS6heV4SwmFTDup6g4DDCLd7mXE1nToDl0tEWqI9DDcY9Hb-Lpttml1iG7X2tdb5jbij4EnN1pUG-qQ/pub?output=csv';
-
-// Cache TTL: 5 minutes
-const CACHE_TTL = 5 * 60 * 1000;
 
 // Amazon Associates affiliate tag
 const AFFILIATE_TAG = 'dpaschal26-20';
@@ -30,65 +22,66 @@ const CATEGORIES = {
   'Reference':  { emoji: '\u{1F4DA}', color: '#3F51B5' },
   'Emergency':  { emoji: '\u{1F6A8}', color: '#F44336' },
   'Materials':  { emoji: '\u{1F9F1}', color: '#8D6E63' },
-  'Grounding':  { emoji: '\u26A1',   color: '#FFC107' }
+  'Grounding':  { emoji: '\u26A1',   color: '#FFC107' },
+  'Solar':      { emoji: '\u2600\uFE0F', color: '#FF9800' },
+  'Sensor':     { emoji: '\u{1F321}\uFE0F', color: '#00BCD4' }
 };
 
-// In-memory cache
-let cache = { data: null, timestamp: 0 };
+// Load parts from local JSON file
+let partsData = [];
+try {
+  const partsPath = path.join(__dirname, '..', '..', 'data', 'parts.json');
+  partsData = JSON.parse(fs.readFileSync(partsPath, 'utf8'));
+} catch (e) {
+  console.error('Failed to load data/parts.json:', e.message);
+}
 
 /**
- * Fetch parts from Google Sheets CSV, parse, group by category.
- * Results are cached for CACHE_TTL milliseconds.
+ * Build grouped parts object from the local JSON data.
  */
-async function fetchParts() {
-  const now = Date.now();
-
-  // Return cached data if still valid
-  if (cache.data && (now - cache.timestamp) < CACHE_TTL) {
-    return cache.data;
-  }
-
-  const response = await fetch(GOOGLE_SHEET_CSV);
-  const csvText = await response.text();
-
-  const records = parse(csvText, {
-    columns: true,
-    skip_empty_lines: true
-  });
-
-  // Group by category
+function buildParts() {
   const grouped = {};
-  records.forEach(row => {
-    const category = row.Category || 'Other';
+
+  partsData.forEach(entry => {
+    const category = entry.category || 'Other';
     if (!grouped[category]) {
       grouped[category] = [];
     }
 
-    const item = row.Item || '';
+    const name = entry.name || '';
+    const asin = entry.asin || null;
 
     // Generate a stable ID from the item name
-    const id = item
+    const id = name
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-|-$/g, '')
       .slice(0, 60);
 
-    // Amazon search URL with affiliate tag
-    const amazonUrl = `https://www.amazon.com/s?k=${encodeURIComponent(item)}&tag=${AFFILIATE_TAG}`;
+    // Use vendor URL if provided, otherwise Amazon affiliate link
+    const amazonUrl = entry.url
+      ? entry.url
+      : asin
+        ? `https://www.amazon.com/dp/${asin}?tag=${AFFILIATE_TAG}`
+        : `https://www.amazon.com/s?k=${encodeURIComponent(name)}&tag=${AFFILIATE_TAG}`;
 
     grouped[category].push({
       id,
-      item,
-      price: row.Price || '',
-      notes: row.Notes || '',
+      item: name,
+      price: entry.price || '',
+      notes: entry.notes || '',
       category,
       categoryInfo: CATEGORIES[category] || { emoji: '\u{1F4CB}', color: '#666' },
       amazonUrl,
-      asin: row.ASIN || null
+      asin,
+      imageUrl: entry.image || null,
+      addons: entry.addons || null,
+      community: entry.community || false,
+      communityMaker: entry.communityMaker || null,
+      communityLinks: entry.communityLinks || null
     });
   });
 
-  cache = { data: grouped, timestamp: now };
   return grouped;
 }
 
@@ -97,13 +90,13 @@ async function fetchParts() {
  */
 function mount(app) {
   // GET /api/parts — returns grouped parts JSON
-  app.get('/api/parts', async (req, res) => {
+  app.get('/api/parts', (req, res) => {
     try {
-      const parts = await fetchParts();
+      const parts = buildParts();
       res.json(parts);
     } catch (error) {
-      console.error('Error fetching parts:', error);
-      res.status(500).json({ error: 'Failed to fetch parts' });
+      console.error('Error building parts:', error);
+      res.status(500).json({ error: 'Failed to load parts' });
     }
   });
 
@@ -120,4 +113,4 @@ function mount(app) {
   });
 }
 
-module.exports = { mount, fetchParts, CATEGORIES, AFFILIATE_TAG };
+module.exports = { mount, buildParts, CATEGORIES, AFFILIATE_TAG };

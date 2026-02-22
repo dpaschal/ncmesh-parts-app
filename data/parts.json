@@ -861,5 +861,20 @@
     "asin": "B0GL4TKVM6",
     "price": "$11.99",
     "image": ""
+  },
+  {
+    "name": "SolarXiao Plus Advanced (by wehooper4)",
+    "category": "Node",
+    "notes": "nRF52840 + E22P 1W LoRa, integrated MPPT solar charging, 18650 battery, selectable 5V/6V/12V solar input \u2014 open-source PCB by NC Mesh member wehooper4",
+    "url": "https://discord.gg/ncmesh",
+    "price": "Contact on Discord",
+    "image": "",
+    "community": true,
+    "communityMaker": "wehooper4",
+    "communityLinks": {
+      "discord": "https://discord.gg/ncmesh",
+      "github": "https://github.com/wehooper4/Meshtastic-Hardware/tree/main/XaioSeries/SolarXaio",
+      "website": "https://ncmesh.net"
+    }
   }
 ]

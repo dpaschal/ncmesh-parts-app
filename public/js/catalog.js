@@ -178,6 +178,17 @@ window.Catalog = (function () {
     catSpan.textContent = info.emoji + ' ' + item.category;
     body.appendChild(catSpan);
 
+    // Community badge
+    if (item.community) {
+      var communityBadge = document.createElement('span');
+      communityBadge.className = 'card-community-badge';
+      communityBadge.textContent = '\u2B50 NC Mesh Community';
+      if (item.communityMaker) {
+        communityBadge.title = 'Made by ' + item.communityMaker + ' \u2014 NC Mesh member';
+      }
+      body.appendChild(communityBadge);
+    }
+
     // Title
     var title = document.createElement('h3');
     title.className = 'card-title';
