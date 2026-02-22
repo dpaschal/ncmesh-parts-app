@@ -7,6 +7,7 @@ const { initDB } = require('./db');
 const partsRoutes = require('./routes/parts');
 const reviewsRoutes = require('./routes/reviews');
 const alertsRoutes = require('./routes/alerts');
+const imagesRoutes = require('./routes/images');
 
 /**
  * Start the application. Returns a promise resolving to
@@ -72,6 +73,7 @@ async function start() {
   partsRoutes.mount(app);
   reviewsRoutes.mount(app, db);
   alertsRoutes.mount(app, db);
+  imagesRoutes.mount(app, db);
 
   // Fallback: serve index.html for any unmatched GET request (SPA support)
   // Express 5 requires named wildcard parameters
