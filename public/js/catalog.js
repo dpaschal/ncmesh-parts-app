@@ -224,6 +224,14 @@ window.Catalog = (function () {
     wishlistBtn.innerHTML = '\uD83D\uDCCB';
     actions.appendChild(wishlistBtn);
 
+    // Watch Price bell button
+    var watchBtn = document.createElement('button');
+    watchBtn.className = 'btn-icon btn-watch-price';
+    watchBtn.title = 'Watch Price';
+    watchBtn.setAttribute('data-id', item.id || '');
+    watchBtn.innerHTML = '\uD83D\uDD14';
+    actions.appendChild(watchBtn);
+
     card.appendChild(actions);
 
     return card;

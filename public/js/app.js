@@ -103,6 +103,11 @@
       });
     }
 
+    // Initialize price alerts (bell icons, subscribe popover)
+    if (window.Alerts) {
+      window.Alerts.init(allItems);
+    }
+
     // Initialize wishlist (localStorage persistence, event listeners)
     if (window.Wishlist) {
       window.Wishlist.init(allItems);

@@ -1372,6 +1372,108 @@ footer a:hover {
 }
 
 
+/* ── Price Alert Popover ── */
+.alert-popover {
+  position: fixed;
+  z-index: 1000;
+  background: #1e293b;
+  border: 1px solid rgba(103, 234, 148, 0.25);
+  border-radius: var(--radius);
+  padding: 1rem;
+  max-width: 250px;
+  width: 250px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(103, 234, 148, 0.08);
+}
+
+.alert-popover-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.6rem;
+}
+
+.alert-popover .alert-email,
+.alert-popover .alert-threshold {
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  color: var(--text-bright);
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 0.4rem;
+}
+
+.alert-popover .alert-email:focus,
+.alert-popover .alert-threshold:focus {
+  border-color: rgba(103, 234, 148, 0.5);
+  box-shadow: 0 0 10px rgba(103, 234, 148, 0.08);
+}
+
+.alert-popover .alert-email::placeholder,
+.alert-popover .alert-threshold::placeholder {
+  color: #4a5568;
+}
+
+.alert-threshold-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 0.6rem;
+}
+
+.btn-subscribe {
+  width: 100%;
+  background: var(--green);
+  color: #0a0e17;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.btn-subscribe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(103, 234, 148, 0.3);
+}
+
+.btn-subscribe:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.alert-feedback {
+  font-size: 0.78rem;
+  min-height: 1.2em;
+  margin-top: 0.4rem;
+  font-weight: 600;
+}
+
+.alert-feedback-success {
+  color: var(--green);
+}
+
+.alert-feedback-error {
+  color: #ef4444;
+}
+
+/* Bell button watching state */
+.btn-watch-price.watching {
+  background: rgba(103, 234, 148, 0.2);
+  border-color: var(--green);
+  color: var(--green);
+  box-shadow: 0 0 8px rgba(103, 234, 148, 0.15);
+}
+
+
 /* ── Animations ── */
 
 @keyframes fadeInOut {
