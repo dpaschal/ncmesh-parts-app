@@ -48,6 +48,11 @@
       window.Catalog.init(allItems, partsData, priceLookup);
     }
 
+    // Give the product modal access to all items (for related items section)
+    if (window.ProductModal) {
+      window.ProductModal.setAllItems(allItems);
+    }
+
     // Initialize wizard (guided node builder)
     if (window.Wizard) {
       window.Wizard.init();
