@@ -134,22 +134,28 @@ window.Catalog = (function () {
     var info = item.categoryInfo || { emoji: '', color: '#666' };
     var displayPrice = getDisplayPrice(item);
 
-    // Image
+    // Image / category hero
     var imageDiv = document.createElement('div');
     imageDiv.className = 'card-image';
-    var img = document.createElement('img');
     if (item.asin) {
+      var img = document.createElement('img');
       img.src = '/api/images/' + encodeURIComponent(item.asin);
+      img.alt = escapeHtml(item.item);
+      img.loading = 'lazy';
+      img.onerror = function () {
+        this.onerror = null;
+        this.src = '/img/placeholder.svg';
+      };
+      imageDiv.appendChild(img);
     } else {
-      img.src = '/img/placeholder.svg';
+      // Category-colored hero with large emoji
+      imageDiv.style.background = 'linear-gradient(135deg, ' + (info.color || '#666') + '22, ' + (info.color || '#666') + '44)';
+      imageDiv.style.borderBottom = '2px solid ' + (info.color || '#666') + '66';
+      var emojiSpan = document.createElement('span');
+      emojiSpan.className = 'card-image-emoji';
+      emojiSpan.textContent = info.emoji || '\uD83D\uDCE6';
+      imageDiv.appendChild(emojiSpan);
     }
-    img.alt = escapeHtml(item.item);
-    img.loading = 'lazy';
-    img.onerror = function () {
-      this.onerror = null;
-      this.src = '/img/placeholder.svg';
-    };
-    imageDiv.appendChild(img);
     card.appendChild(imageDiv);
 
     // Body
