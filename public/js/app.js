@@ -53,6 +53,11 @@
       window.ProductModal.setAllItems(allItems);
     }
 
+    // Initialize comparison view (side-by-side product compare)
+    if (window.Compare) {
+      window.Compare.init(allItems);
+    }
+
     // Initialize wizard (guided node builder)
     if (window.Wizard) {
       window.Wizard.init();

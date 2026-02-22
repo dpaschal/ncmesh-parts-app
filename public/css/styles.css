@@ -562,6 +562,18 @@ h1 {
   height: 16px;
 }
 
+.btn-compare.selected {
+  background: var(--green);
+  color: #0a0e17;
+  border-color: var(--green);
+}
+
+.btn.btn-compare.selected {
+  background: var(--green);
+  color: #0a0e17;
+  border-color: var(--green);
+}
+
 
 /* ── Compare Bar (sticky bottom) ── */
 .compare-bar {
@@ -1145,4 +1157,14 @@ footer a:hover {
     width: 46px;
     height: 46px;
   }
+}
+
+
+/* ── Animations ── */
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  15% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  75% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-8px); }
 }
