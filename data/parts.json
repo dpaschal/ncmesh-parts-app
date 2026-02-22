@@ -1,0 +1,865 @@
+[
+  {
+    "name": "Raspberry Pi 5 8GB",
+    "category": "Node",
+    "notes": "Main board for Meshtastic nodes",
+    "asin": "B0CK2FCG1K",
+    "price": "$134.48",
+    "image": "https://m.media-amazon.com/images/I/41UfoxQnTDL._SL500_.jpg"
+  },
+  {
+    "name": "Heltec Mesh Node T114 V2 Meshtastic Tracker",
+    "category": "Node",
+    "notes": "nRF52480 SX1262 LoRa 902-928MHz with 1.14in TFT display, solar power support",
+    "asin": "B0DDLCX9BW",
+    "price": "$38.35",
+    "image": "https://m.media-amazon.com/images/I/41DdymaANzL._SL500_.jpg"
+  },
+  {
+    "name": "LILYGO T-BeamSUPREME Meshtastic 915MHz ESP32-S3",
+    "category": "Node",
+    "notes": "LoRa L76K GPS WiFi Bluetooth with 1.3in SH1106 OLED",
+    "asin": "B0CXJ71NB6",
+    "price": "$50.00",
+    "image": "https://m.media-amazon.com/images/I/31z6o9c4lOL._SL500_.jpg"
+  },
+  {
+    "name": "LILYGO T-Deck Plus ESP32-S3 915MHz LoRa",
+    "category": "Node",
+    "notes": "2.8in display, Ulbox GPS, built-in antenna with ABS shell \u2014 full keyboard node",
+    "asin": "B0FBGX1VP5",
+    "price": "$102.00",
+    "image": "https://m.media-amazon.com/images/I/41ExPMDEL7L._SL500_.jpg"
+  },
+  {
+    "name": "Heltec WiFi LoRa 32 V3 ESP32-S3 902-928MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262, 0.96in OLED, WiFi/BLE/LoRa, USB-C \u2014 cheapest Meshtastic dev board",
+    "asin": "B0D1H1FN9Y",
+    "price": "$23.99",
+    "image": "https://m.media-amazon.com/images/I/610WDB4fbjL._AC_SL1500_.jpg"
+  },
+  {
+    "name": "Heltec Wireless Tracker V1.1 ESP32-S3 GPS 902-928MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262 + UC6580 GNSS, 0.96in LCD, WiFi/BLE/LoRa/GPS \u2014 built-in GPS tracker",
+    "asin": "B0D1QBSLKS",
+    "price": "$27.99",
+    "image": "https://m.media-amazon.com/images/I/71In-TkGWyL._AC_SL1500_.jpg"
+  },
+  {
+    "name": "RAKwireless WisBlock Meshtastic Starter Kit US915",
+    "category": "Node",
+    "notes": "nRF52840 + SX1262, modular WisBlock base + core, pre-flashed Meshtastic, includes antennas and USB cable",
+    "url": "https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit",
+    "price": "$24.99",
+    "image": "https://m.media-amazon.com/images/I/51VzDT21fzL._AC_SL1000_.jpg"
+  },
+  {
+    "name": "LILYGO T-Beam V1.2 ESP32 LoRa 915MHz GPS",
+    "category": "Node",
+    "notes": "ESP32 + SX1276, NEO-6M GPS, WiFi/BLE, 18650 battery holder \u2014 the classic Meshtastic GPS node",
+    "asin": "B0CZ6PDXW4",
+    "price": "$37.50",
+    "image": "https://m.media-amazon.com/images/I/617S7dsz5sL._AC_SL1000_.jpg"
+  },
+  {
+    "name": "Heltec MeshPocket Qi2 5000mAh 915MHz",
+    "category": "Node",
+    "notes": "nRF52840 + SX1262, 2.13in E-ink, 5000mAh Qi2 wireless charging, IP67 \u2014 node + power bank combo",
+    "asin": "B0FBFHTJCS",
+    "price": "$59.00",
+    "image": "https://m.media-amazon.com/images/I/51NPA3TllqL._AC_SL1000_.jpg"
+  },
+  {
+    "name": "SenseCAP Card Tracker T1000-E for Meshtastic",
+    "category": "Node",
+    "notes": "nRF52840 + LR1110 + GPS, credit-card size, IP65, 700mAh, temp/light/motion sensors \u2014 smallest tracker",
+    "asin": "B0DJ6KGXKB",
+    "price": "$39.90",
+    "image": "https://m.media-amazon.com/images/I/512OsXbPsDL._AC_SL1235_.jpg"
+  },
+  {
+    "name": "B&Q Consulting Station G2 Meshtastic",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262, Ethernet, GPS, 1.3in OLED, aluminum case \u2014 premium base station node",
+    "url": "https://shop.uniteng.com/product/meshtastic-mesh-device-station-edition/",
+    "price": "$109.00",
+    "image": "https://shop.uniteng.com/wp-content/uploads/2022/08/Station_G2_overview_small.jpg"
+  },
+  {
+    "name": "B&Q Consulting Nano G2 Ultra Meshtastic",
+    "category": "Node",
+    "notes": "nRF52840 + SX1262, GPS, 1.3in OLED, compact aluminum case \u2014 low-power portable admin node",
+    "url": "https://shop.uniteng.com/product/meshtastic-mesh-device-nano-g2-ultra/",
+    "price": "$86.00",
+    "image": "https://shop.uniteng.com/wp-content/uploads/2023/07/nano_g2_ultra_product_image.jpg"
+  },
+  {
+    "name": "Seeed Wio Tracker 1110 Dev Kit for Meshtastic",
+    "category": "Node",
+    "notes": "nRF52840 + SX1262 + L76K GPS, Grove sensor ecosystem, compact \u2014 great for sensor mesh nodes",
+    "url": "https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Kit-for-Meshtastic.html",
+    "price": "$38.07",
+    "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/48035b5512857d0ab907b31a092da78f/2/-/2-wio-tracker-1110-dev-kit-for-meshtastic-45font.jpg"
+  },
+  {
+    "name": "HotspotRF Tuned 915MHz LoRa Antenna 8 dBi",
+    "category": "Antenna",
+    "notes": "Omnidirectional, low signal loss, VSWR under 1.2, Helium/IoT compatible",
+    "asin": "B0B5SNY446",
+    "price": "",
+    "image": "https://m.media-amazon.com/images/I/31OYodjlRFL._SL500_.jpg"
+  },
+  {
+    "name": "XRDS-RF SMA to N Cable 2FT KMR400",
+    "category": "Cable",
+    "notes": "N-Male to SMA-Male low loss extension cable for external antennas",
+    "asin": "B0BF3HQQJD",
+    "price": "$12.99",
+    "image": "https://m.media-amazon.com/images/I/41sedyltLAL._SL500_.jpg"
+  },
+  {
+    "name": "Eightwood N Female to N Male Jumper RG400 3ft",
+    "category": "Cable",
+    "notes": "Low loss coax for LTE, WiFi Yagi, wireless router, ham radio",
+    "asin": "B0B3XKJPR3",
+    "price": "$14.99",
+    "image": "https://m.media-amazon.com/images/I/31Nc1BKrnnL._SL500_.jpg"
+  },
+  {
+    "name": "Eightwood N Male to N Male Jumper RG400 3ft",
+    "category": "Cable",
+    "notes": "Low loss coaxial for antenna, router, ham radio",
+    "asin": "B089LQ8D7G",
+    "price": "$14.99",
+    "image": "https://m.media-amazon.com/images/I/31Lk85uO7lL._SL500_.jpg"
+  },
+  {
+    "name": "chenyang USB-C Short Flat Cable Dual 90-Degree",
+    "category": "Cable",
+    "notes": "USB 2.0 PD 65W fast charge, 75mm \u2014 great for tight enclosures",
+    "asin": "B0D22Q8CYK",
+    "price": "$12.99",
+    "image": "https://m.media-amazon.com/images/I/31EQ2DGwy8L._SL500_.jpg"
+  },
+  {
+    "name": "Rixmie Short USB-C Cable 40Gbps USB4",
+    "category": "Cable",
+    "notes": "Thunderbolt 4/3 compatible, supports 8K display",
+    "asin": "B0BHT7JDF9",
+    "price": "$14.99",
+    "image": "https://m.media-amazon.com/images/I/41h-wXfo6wL._SL500_.jpg"
+  },
+  {
+    "name": "FPVBASIC Flex Slim USB-C Cable 10cm",
+    "category": "Cable",
+    "notes": "Ultra-thin FPC cable, USB-C to USB-C for sync and charging",
+    "asin": "B0D2P72DJG",
+    "price": "$10.00",
+    "image": "https://m.media-amazon.com/images/I/21uO0KSlLuL._SL500_.jpg"
+  },
+  {
+    "name": "uxcell SMA Male to RP-TNC Female Adapter 13in",
+    "category": "Adapter",
+    "notes": "RF coaxial pigtail cable for antenna connections",
+    "asin": "B007PPHV2I",
+    "price": "$8.69",
+    "image": "https://m.media-amazon.com/images/I/412E+A53StL._SL500_.jpg"
+  },
+  {
+    "name": "USB-C to USB 3.0 Adapter 90-Degree (3 Pack)",
+    "category": "Adapter",
+    "notes": "USB-A 3.0 Female to USB-C 3.1 Male right angle OTG adapter",
+    "asin": "B0BBW8JKJX",
+    "price": "$6.79",
+    "image": "https://m.media-amazon.com/images/I/410UQboxDNL._SL500_.jpg"
+  },
+  {
+    "name": "QIANRENON USB-C Quick Connect to 5-Pin Crimp Terminal",
+    "category": "Connector",
+    "notes": "480Mbps, 5V2A \u2014 for repair and DIY, 30cm",
+    "asin": "B0CMXCD8Z4",
+    "price": "$9.99",
+    "image": "https://m.media-amazon.com/images/I/31C05LXsk8L._SL500_.jpg"
+  },
+  {
+    "name": "JST 1.25mm 2-Pin Micro Connectors (10 Pairs)",
+    "category": "Connector",
+    "notes": "Male and female with 80mm wire cables",
+    "asin": "B07FP2FCYC",
+    "price": "$5.99",
+    "image": "https://m.media-amazon.com/images/I/51bwrpEMjkL._SL500_.jpg"
+  },
+  {
+    "name": "JST PH2.0 Connectors 30-Pack",
+    "category": "Connector",
+    "notes": "Female and male with 100mm wire cables",
+    "asin": "B088NFRNZ2",
+    "price": "$7.99",
+    "image": "https://m.media-amazon.com/images/I/41GONN9KHkL._SL500_.jpg"
+  },
+  {
+    "name": "6W Solar Panel 5V (2 Pack)",
+    "category": "Power",
+    "notes": "IP65 waterproof with adjustable wall mount, 9.8ft cable \u2014 great for outdoor nodes",
+    "asin": "B09XR1KH9R",
+    "price": "",
+    "image": "https://m.media-amazon.com/images/I/41cylBpzmoL._SL500_.jpg"
+  },
+  {
+    "name": "Voltaic Systems V50 Always-On Battery Pack 12800mAh",
+    "category": "Power",
+    "notes": "Dual USB ports \u2014 stays on with low-draw devices like Meshtastic nodes",
+    "asin": "B00XZ7YU4M",
+    "price": "$74.00",
+    "image": "https://m.media-amazon.com/images/I/21COE8t1YtL._SL500_.jpg"
+  },
+  {
+    "name": "MakerHawk 3.7V 5000mAh LiPo Battery",
+    "category": "Power",
+    "notes": "1S 3C rechargeable with protection board, JST2.0 plug for ESP32/RPi",
+    "asin": "B0D7LXL49K",
+    "price": "$18.99",
+    "image": "https://m.media-amazon.com/images/I/41iB-TYyu2L._SL500_.jpg"
+  },
+  {
+    "name": "KOOBOOK 10pcs 3A BMS Protection Board 1S 3.7V",
+    "category": "Power",
+    "notes": "For 18650 Li-ion lithium battery cell \u2014 essential for DIY battery packs",
+    "asin": "B07W75BQWW",
+    "price": "$6.99",
+    "image": "https://m.media-amazon.com/images/I/41+jVsBvRvL._SL500_.jpg"
+  },
+  {
+    "name": "Gigabit USB-C PoE Splitter 5V 3A",
+    "category": "Power",
+    "notes": "IEEE 802.3af/at, 10/100/1000Mbps \u2014 cheaper than PoE hats, Ethernet + USB-C out",
+    "asin": "B09GM8FB3X",
+    "price": "$13.99",
+    "image": "https://m.media-amazon.com/images/I/41dmqa6jj8L._SL500_.jpg"
+  },
+  {
+    "name": "REVODATA 25W PoE to USB-C Adapter",
+    "category": "Power",
+    "notes": "5V/9V/12V/15V/20V adaptive output with Ethernet passthrough",
+    "asin": "B0D5B2CSK5",
+    "price": "$47.69",
+    "image": "https://m.media-amazon.com/images/I/31vSRfzBqXL._SL500_.jpg"
+  },
+  {
+    "name": "TICONN Waterproof Junction Box IP67 (5.9x5.9x3.5in)",
+    "category": "Enclosure",
+    "notes": "ABS plastic, hinged cover, mounting plate, wall brackets, cable glands",
+    "asin": "B0B87VR84G",
+    "price": "$19.99",
+    "image": "https://m.media-amazon.com/images/I/51yrey6I5QL._SL500_.jpg"
+  },
+  {
+    "name": "TICONN Waterproof Junction Box IP67 (10.2x4.3x3.0in)",
+    "category": "Enclosure",
+    "notes": "Larger ABS plastic enclosure for bigger builds",
+    "asin": "B0BZR34JS5",
+    "price": "$24.99",
+    "image": "https://m.media-amazon.com/images/I/51X-4WC4vpL._SL500_.jpg"
+  },
+  {
+    "name": "Zulkit Junction Box Mounting Plates (7.9x3.9x2.8in)",
+    "category": "Enclosure",
+    "notes": "Mounting plates for junction boxes",
+    "asin": "B09WK86WXJ",
+    "price": "$8.99",
+    "image": "https://m.media-amazon.com/images/I/31A2Xcj9GnL._SL500_.jpg"
+  },
+  {
+    "name": "WiTi Universal Vertical Pole Mount",
+    "category": "Mounting",
+    "notes": "Solid metal bracket with 2 loops \u2014 inexpensive pole mount for enclosures",
+    "asin": "B0BF4SJWXB",
+    "price": "$9.98",
+    "image": "https://m.media-amazon.com/images/I/41yE3acZsOL._SL500_.jpg"
+  },
+  {
+    "name": "Brass Hex Standoff M4x30mm (10 Pack)",
+    "category": "Hardware",
+    "notes": "Male to female thread spacer for mounting batteries under TICONN grid",
+    "asin": "B0BPDDCZX8",
+    "price": "$6.99",
+    "image": "https://m.media-amazon.com/images/I/41TSCPRYpYL._SL500_.jpg"
+  },
+  {
+    "name": "600PCS M3 Nylon Hex Spacer Standoffs Kit",
+    "category": "Hardware",
+    "notes": "Nylon for mounting boards safely \u2014 no risk of shorts",
+    "asin": "B0CBPGKDP4",
+    "price": "$14.99",
+    "image": "https://m.media-amazon.com/images/I/51b0tijbJfL._SL500_.jpg"
+  },
+  {
+    "name": "1500PCS Screws Nuts & Washers Assortment M2-M6",
+    "category": "Hardware",
+    "notes": "Hex socket head cap metric bolts, 12.9 grade alloy steel with 5 Allen wrenches",
+    "asin": "B0BYZ1KK1V",
+    "price": "$20.99",
+    "image": "https://m.media-amazon.com/images/I/51fTCQyx64L._SL500_.jpg"
+  },
+  {
+    "name": "E01-ML01DP5 nRF24L01P Module Shield",
+    "category": "Electronics",
+    "notes": "E01-2G4M27D shield modules for radio development",
+    "asin": "B0B3S6N8JD",
+    "price": "$9.00",
+    "image": "https://m.media-amazon.com/images/I/41VMaKaMa3L._SL500_.jpg"
+  },
+  {
+    "name": "HiLetgo NEO-6M GPS Module",
+    "category": "Electronics",
+    "notes": "3V-5V with super strong ceramic antenna for Arduino",
+    "asin": "B01D1D0F5M",
+    "price": "$8.99",
+    "image": "https://m.media-amazon.com/images/I/51UT1vH4U+L._SL500_.jpg"
+  },
+  {
+    "name": "UCTRONICS 0.96in OLED Display 128x64 SSD1306",
+    "category": "Electronics",
+    "notes": "I2C serial, yellow/blue, for Arduino Raspberry Pi Pico",
+    "asin": "B072Q2X2LL",
+    "price": "$6.99",
+    "image": "https://m.media-amazon.com/images/I/518qBHbv-yL._SL500_.jpg"
+  },
+  {
+    "name": "3-Way Round Rocker Switch 12V Waterproof (8 Pack)",
+    "category": "Electronics",
+    "notes": "ON/OFF/ON, 6A/250V AC, SPDT circle toggle with wires",
+    "asin": "B0BMG4CRDY",
+    "price": "$9.99",
+    "image": "https://m.media-amazon.com/images/I/41t4SI7A7KL._SL500_.jpg"
+  },
+  {
+    "name": "CQRobot 10.525GHz Doppler Microwave Motion Sensor",
+    "category": "Electronics",
+    "notes": "Compatible with RPi and Arduino \u2014 industrial, smart lights, radar",
+    "asin": "B089NKGWQQ",
+    "price": "$15.99",
+    "image": "https://m.media-amazon.com/images/I/413Z7GZPyyL._SL500_.jpg"
+  },
+  {
+    "name": "Treedix JTAG Breakout Board Adapter",
+    "category": "Electronics",
+    "notes": "Multi-function adapter for ST-Link and J-Link",
+    "asin": "B0DJ53GV42",
+    "price": "$12.99",
+    "image": "https://m.media-amazon.com/images/I/51Y8ufiBbrL._SL500_.jpg"
+  },
+  {
+    "name": "Goupchn Test Hook Clips to Breadboard Jumper Wires",
+    "category": "Tools",
+    "notes": "Soft flexible silicone test leads for electrical testing",
+    "asin": "B08M5GNY47",
+    "price": "$9.99",
+    "image": "https://m.media-amazon.com/images/I/51v3R7I1oFL._SL500_.jpg"
+  },
+  {
+    "name": "TinySA Ultra Spectrum Analyzer 100kHz-5.3GHz",
+    "category": "Tools",
+    "notes": "2-in-1 signal generator, 4in touch screen, 32GB SD, 3000mAh battery",
+    "asin": "B0CJ4LGLC6",
+    "price": "",
+    "image": "https://m.media-amazon.com/images/I/519OKpOclHL._SL500_.jpg"
+  },
+  {
+    "name": "Milwaukee Step Drill Bit 3/16in to 7/8in",
+    "category": "Tools",
+    "notes": "Great for making holes in plastic enclosures for N-type connectors",
+    "asin": "B00FK8WIXO",
+    "price": "$17.89",
+    "image": "https://m.media-amazon.com/images/I/31PjzYyaXeL._SL500_.jpg"
+  },
+  {
+    "name": "Soldering Iron Tip Cleaner Brass Wire (10 Pack)",
+    "category": "Tools",
+    "notes": "Interchangeable solder tip cleaning wire for soldering stations",
+    "asin": "B0F1MVHYVS",
+    "price": "$9.99",
+    "image": "https://m.media-amazon.com/images/I/51d71RxSQHL._SL500_.jpg"
+  },
+  {
+    "name": "XHF 3:1 Waterproof Heat Shrink Tubing 1-1/4in 4ft",
+    "category": "Materials",
+    "notes": "Marine grade adhesive-lined tube for weatherproofing cable connections",
+    "asin": "B07FPBKVXC",
+    "price": "$6.99",
+    "image": "https://m.media-amazon.com/images/I/31Em2Ix0FBL._SL500_.jpg"
+  },
+  {
+    "name": "3M Dual Lock SJ3550A 1in x 8ft",
+    "category": "Materials",
+    "notes": "Reclosable fastener tape \u2014 mount and remove boards from enclosures easily",
+    "asin": "B08R3BFZ27",
+    "price": "$22.99",
+    "image": "https://m.media-amazon.com/images/I/5105K1wrnxL._SL500_.jpg"
+  },
+  {
+    "name": "GOUNENGNAIL 4ft Grounding Rod 3/8in Copper",
+    "category": "Grounding",
+    "notes": "With wire clamp \u2014 for antennas, satellite dishes, electric fences",
+    "asin": "B08PKZYVLV",
+    "price": "$21.50",
+    "image": "https://m.media-amazon.com/images/I/21RW9FLJYFL._SL500_.jpg"
+  },
+  {
+    "name": "Seeed SenseCAP Solar Node P1-Pro",
+    "category": "Solar",
+    "notes": "Solar-powered Meshtastic router \u2014 5W panel, 4x 18650 batteries, GPS, 48mA draw for 24/7 relay operation",
+    "url": "https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html",
+    "price": "$89.90",
+    "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png",
+    "addons": [
+      "slinkdsco-5-8dbi-meshtastic-lora-915mhz-fiberglass-antenna"
+    ]
+  },
+  {
+    "name": "TICONN Waterproof Junction Box IP67 (8.7x6.7x4.3in)",
+    "category": "Enclosure",
+    "notes": "Largest TICONN box \u2014 ABS plastic, hinged cover, mounting plate, wall brackets, cable glands",
+    "asin": "B0B87X944Z",
+    "price": "$24.99",
+    "image": "https://m.media-amazon.com/images/I/71G3a-i4IUL._SL1500_.jpg"
+  },
+  {
+    "name": "ALFA Network AOA-915-5ACM 5dBi 915MHz Antenna",
+    "category": "Antenna",
+    "notes": "Omni outdoor N-male, 7in tall, weatherproof, made in Taiwan \u2014 tuned for LoRa/HaLow 902-928MHz",
+    "asin": "B08H8J6ZV6",
+    "price": "$17.97",
+    "image": "https://m.media-amazon.com/images/I/51U4oecSJLL._AC_SL1500_.jpg"
+  },
+  {
+    "name": "Boobrie N Female to SMA Male Adapter (2 Pack)",
+    "category": "Adapter",
+    "notes": "RF coaxial connector, pure copper nickel/gold plated, 50 ohm",
+    "asin": "B07DC2B295",
+    "price": "$6.98",
+    "image": "https://m.media-amazon.com/images/I/61USlOlS83L._AC_SL1001_.jpg"
+  },
+  {
+    "name": "USB Solar Panel 6W 5V Monocrystalline (2 Pack)",
+    "category": "Power",
+    "notes": "IP67 waterproof, USB-A output, 24% conversion, carabiner mount \u2014 great for powering nodes",
+    "asin": "B0C4L1L1BD",
+    "price": "$19.99",
+    "image": "https://m.media-amazon.com/images/I/61JF2fO31NL._AC_SL1500_.jpg"
+  },
+  {
+    "name": "urcianow N Female to SMA Male RG316 Cable 6in (2 Pack)",
+    "category": "Cable",
+    "notes": "50 ohm low loss coaxial pigtail, gold plated SMA, nickel plated N connector",
+    "asin": "B0C58LR6JX",
+    "price": "$10.99",
+    "image": "https://m.media-amazon.com/images/I/61KFefT-+8L._SL1500_.jpg"
+  },
+  {
+    "name": "MOOKEERF SMA Male to N Male Cable 3ft (2 Pack)",
+    "category": "Cable",
+    "notes": "RG316 50 ohm low loss coaxial jumper for WiFi router, GPS, antenna, signal booster",
+    "asin": "B0CMZL32VJ",
+    "price": "$18.99",
+    "image": "https://m.media-amazon.com/images/I/61DWwduu1HL._SL1500_.jpg"
+  },
+  {
+    "name": "SDTC Tech SMA Male to SMA Male Cable 6in (5 Pack)",
+    "category": "Cable",
+    "notes": "RG316 coaxial antenna extender cable adapter jumper",
+    "asin": "B07NCLZWHH",
+    "price": "$12.99",
+    "image": "https://m.media-amazon.com/images/I/61jnJS1PE3L._AC_SL1500_.jpg"
+  },
+  {
+    "name": "8dBi Glass Fiber LoRa 915MHz Antenna with 16.4ft Cable",
+    "category": "Antenna",
+    "notes": "Omni-directional fiberglass, waterproof, 60cm tall, N-type connector, 900-930MHz",
+    "asin": "B097ZNGX6S",
+    "price": "$45.99",
+    "image": "https://m.media-amazon.com/images/I/61tsTDdqqbL._AC_SL1500_.jpg"
+  },
+  {
+    "name": "DFRobot 900mA MPPT Solar Panel Controller",
+    "category": "Solar",
+    "notes": "Solar power manager for 5V panels, CN3165 IC, 3-phase charging, 5V 1A regulated output",
+    "asin": "B07MML4YJV",
+    "price": "$13.90",
+    "image": "https://m.media-amazon.com/images/I/61mU5S0ROXL._SL1000_.jpg"
+  },
+  {
+    "name": "COSIBOA Breather Plug M12x1.5 Vent (2 Pack)",
+    "category": "Hardware",
+    "notes": "Porous membrane blocks water/dust but passes air \u2014 prevents condensation in outdoor enclosures",
+    "asin": "B0C328HWV7",
+    "price": "$9.29",
+    "image": "https://m.media-amazon.com/images/I/51snGRfOq5L._AC_SL1005_.jpg"
+  },
+  {
+    "name": "XRDS-RF N Male to N Female Cable 3ft KMR400",
+    "category": "Cable",
+    "notes": "50 ohm ultra-low loss extension cable for WiFi/ham radio antenna, signal booster, router",
+    "asin": "B09TZPPVMW",
+    "price": "$14.99",
+    "image": "https://m.media-amazon.com/images/I/610gF6Q8lML._SL1500_.jpg"
+  },
+  {
+    "name": "Ubiquiti U-POE+ PoE Injector 30W 802.3at",
+    "category": "Network",
+    "notes": "PoE+ power for U6 APs (U6-LR, U6-Lite, U6-Pro), surge/clamping protection, earth ground",
+    "asin": "B0B7QDZYPX",
+    "price": "$21.99",
+    "image": "https://m.media-amazon.com/images/I/21Gl+lMIvyL._AC_SL1000_.jpg"
+  },
+  {
+    "name": "Bingfu SMA Male to N Female Bulkhead RG58 Cable 1ft",
+    "category": "Adapter",
+    "notes": "Coaxial adapter cable for bulkhead mount, compatible with 4G LTE router, RTL SDR, ADS-B receiver",
+    "asin": "B084VB68H4",
+    "price": "$7.99",
+    "image": "https://m.media-amazon.com/images/I/517KqWgfVWL._AC_SL1043_.jpg"
+  },
+  {
+    "name": "muzi works 915MHz Whip Antenna 17cm",
+    "category": "Antenna",
+    "notes": "SWR 1.3 (98% efficient) vs stock 3.5 (69%) \u2014 flexible SMA male, huge upgrade over stock stubby antennas",
+    "asin": "B0D7D6866W",
+    "price": "$11.90",
+    "image": "https://muzi.works/cdn/shop/files/DSCF2783_0404b240-a919-4ab5-bb66-ce174aac1fa0.jpg?v=1726524957"
+  },
+  {
+    "name": "Slinkdsco 5.8dBi Meshtastic LoRa 915MHz Fiberglass Antenna",
+    "category": "Antenna",
+    "notes": "Waterproof fiberglass, N-male connector, includes IPEX/u.fl adapter cable, 40cm/16in \u2014 great for outdoor nodes",
+    "asin": "B0GBSTPHKG",
+    "price": "",
+    "image": "https://m.media-amazon.com/images/I/61i-3aB15lL._AC_SL1500_.jpg"
+  },
+  {
+    "name": "Heltec WiFi LoRa 32 V4 ESP32-S3 902-928MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262 28dBm, 0.96in OLED, WiFi/BLE/LoRa, 2MB PSRAM, solar connector \u2014 upgraded V3",
+    "asin": "B0GCLNQW53",
+    "price": "$26.99",
+    "image": ""
+  },
+  {
+    "name": "Heltec Wireless Stick Lite V3 ESP32-S3 902-928MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262, no display, no GPS \u2014 cheapest Heltec, great for repeaters",
+    "asin": "B0D1R46F13",
+    "price": "$14.99",
+    "image": ""
+  },
+  {
+    "name": "Heltec Vision Master E213 ESP32-S3 902-928MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262, 2.13in E-Ink display, WiFi/BLE/LoRa \u2014 e-ink badge node",
+    "asin": "B0DCBYK7M1",
+    "price": "$24.99",
+    "image": ""
+  },
+  {
+    "name": "Heltec Vision Master E290 ESP32-S3 902-928MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262, 2.9in E-Ink display \u2014 larger e-ink variant",
+    "asin": "B0D9JWT4P1",
+    "price": "$29.99",
+    "image": ""
+  },
+  {
+    "name": "Heltec Vision Master T190 ESP32-S3 902-928MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262, 1.9in color TFT display, WiFi/BLE/LoRa",
+    "asin": "B0D818DT7R",
+    "price": "$24.99",
+    "image": ""
+  },
+  {
+    "name": "Heltec Capsule Sensor V3 ESP32-S3 902-928MHz",
+    "category": "Node",
+    "notes": "IP65 waterproof capsule, GPS, built-in antenna, 250mAh battery, 2.5km range",
+    "asin": "B0D265YPR9",
+    "price": "$19.99",
+    "image": ""
+  },
+  {
+    "name": "LILYGO T-Echo nRF52840 LoRa 915MHz",
+    "category": "Node",
+    "notes": "nRF52840 + SX1262, 1.54in E-Paper, GPS, BLE, NFC, BME280 sensor \u2014 ultra-low power portable",
+    "asin": "B0B659536P",
+    "price": "$44.99",
+    "image": ""
+  },
+  {
+    "name": "LILYGO LoRa32 T3-S3 V1.0 ESP32-S3 915MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262, 0.96in OLED \u2014 budget ESP32-S3 LoRa board",
+    "asin": "B0BW5WWT8H",
+    "price": "$19.99",
+    "image": ""
+  },
+  {
+    "name": "LILYGO T-Deck Pro ESP32-S3 915MHz E-Paper",
+    "category": "Node",
+    "notes": "3.1in E-Paper, optional 4G module, GPS, full keyboard \u2014 premium T-Deck variant",
+    "asin": "B0FMRGY5L8",
+    "price": "$129.99",
+    "image": ""
+  },
+  {
+    "name": "LILYGO T-Lora Pager ESP32-S3 915MHz",
+    "category": "Node",
+    "notes": "2.3in IPS LCD, foldable antenna, NFC, RTC \u2014 Meshtastic or MeshCore firmware",
+    "asin": "B0FZKGBR8R",
+    "price": "$54.99",
+    "image": ""
+  },
+  {
+    "name": "Elecrow ThinkNode M1 nRF52840 LoRa 915MHz",
+    "category": "Node",
+    "notes": "nRF52840 + SX1262, 1.54in E-Paper, GPS, 4-5 day battery \u2014 best value e-paper handheld",
+    "asin": "B0G4D5ML1F",
+    "price": "$54.00",
+    "url": "https://www.elecrow.com/thinknode-m1-meshtastic-lora-signal-transceiver-powered-by-nrf52840-with-154-screen-support-gps.html",
+    "image": ""
+  },
+  {
+    "name": "Elecrow ThinkNode M5 ESP32-S3 LoRa 915MHz",
+    "category": "Node",
+    "notes": "ESP32-S3 + SX1262, 1.54in E-Paper, GPS \u2014 ESP32 variant of ThinkNode",
+    "url": "https://www.elecrow.com/thinknode-m5-meshtastic-lora-signal-transceiver-esp32-s3-1-54-screen-gps-function.html",
+    "price": "$54.00",
+    "image": ""
+  },
+  {
+    "name": "Elecrow ThinkNode M6 Solar Outdoor nRF52840 915MHz",
+    "category": "Node",
+    "notes": "Solar-powered outdoor node, 6W panel, MPPT, IP-rated, GPS, nRF52840 + SX1262",
+    "url": "https://www.elecrow.com/thinknode-m6-outdoor-solar-power-for-meshtastic-powered-by-nrf52840-supports-gps.html",
+    "price": "$79.99",
+    "image": ""
+  },
+  {
+    "name": "Seeed SenseCAP Indicator D1L for Meshtastic",
+    "category": "Node",
+    "notes": "4in touchscreen 480x480, ESP32-S3 + RP2040 dual MCU, WiFi/BLE/LoRa \u2014 desktop display node",
+    "asin": "B0F8V44ZDK",
+    "price": "$47.90",
+    "url": "https://www.seeedstudio.com/SenseCAP-Indicator-D1L-for-Meshtastic-p-6304.html",
+    "image": ""
+  },
+  {
+    "name": "Seeed XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic",
+    "category": "Node",
+    "notes": "Cheapest Meshtastic node (~$10), WiFi/BLE/LoRa, pre-flashed",
+    "asin": "B0F8TSW1WZ",
+    "price": "$9.90",
+    "url": "https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html",
+    "image": ""
+  },
+  {
+    "name": "Seeed XIAO nRF52840 & Wio-SX1262 Kit for Meshtastic",
+    "category": "Node",
+    "notes": "Low-power nRF52840 variant, BLE/LoRa, pre-flashed Meshtastic",
+    "url": "https://www.seeedstudio.com/XIAO-nRF52840-Wio-SX1262-Kit-for-Meshtastic-p-6400.html",
+    "price": "$15.90",
+    "image": ""
+  },
+  {
+    "name": "RAKwireless WisMesh Pocket V2 915MHz",
+    "category": "Node",
+    "notes": "Handheld with OLED, GPS, GNSS, multicolor enclosure \u2014 RAK turnkey device",
+    "url": "https://store.rakwireless.com/products/wismesh-pocket",
+    "price": "$99.00",
+    "image": ""
+  },
+  {
+    "name": "RAKwireless WisMesh Pocket Mini 915MHz",
+    "category": "Node",
+    "notes": "Ultra-compact portable, no display/GPS, great for simple mesh comms",
+    "url": "https://store.rakwireless.com/products/wismesh-pocket-mini",
+    "price": "$55.00",
+    "image": ""
+  },
+  {
+    "name": "RAKwireless WisMesh Repeater 915MHz",
+    "category": "Node",
+    "notes": "Solar-powered, waterproof enclosure, high-performance antenna \u2014 deploy and forget",
+    "url": "https://store.rakwireless.com/collections/meshtastic",
+    "price": "$119.99",
+    "image": ""
+  },
+  {
+    "name": "RAKwireless WisMesh Ethernet MQTT Gateway 915MHz",
+    "category": "Node",
+    "notes": "RAK4631 + RAK13800 Ethernet, PoE support, pre-assembled MQTT gateway",
+    "url": "https://store.rakwireless.com/collections/meshtastic",
+    "price": "$94.99",
+    "image": ""
+  },
+  {
+    "name": "SpecFive Ranger Meshtastic Handheld",
+    "category": "Node",
+    "notes": "QWERTY keyboard, touchscreen, GPS, 32GB SD with US maps \u2014 standalone messenger",
+    "asin": "B0GGBR7Q8C",
+    "price": "$179.99",
+    "url": "https://specfive.com/products/spec5-ranger-device",
+    "image": ""
+  },
+  {
+    "name": "SpecFive Trekker Delta Meshtastic",
+    "category": "Node",
+    "notes": "Compact handheld, 36hr continuous use, 100hr standby, GPS",
+    "asin": "B0F3QNXRJ3",
+    "price": "$143.99",
+    "url": "https://specfive.com/products/spec5-trekker-delta",
+    "image": ""
+  },
+  {
+    "name": "Muzi Works R1 Neo Meshtastic Device",
+    "category": "Node",
+    "notes": "Custom nRF52840 + SX1262, dual GPS, IP68, 1500mAh, 3-day battery, USB-C",
+    "url": "https://muzi.works/products/r1-neo-complete-meshtastic-device",
+    "price": "$89.00",
+    "image": ""
+  },
+  {
+    "name": "MeshTadpole SX1262 USB LoRa Stick 915MHz",
+    "category": "Node",
+    "notes": "USB LoRa dongle \u2014 plug into any Linux computer (RPi, laptop) to create a Meshtastic node via meshtasticd",
+    "url": "https://www.elecrow.com/meshtadpole-sx1262-usb-stick.html",
+    "price": "$24.99",
+    "image": ""
+  },
+  {
+    "name": "MeshToad V2.0 1W USB LoRa Stick 915MHz",
+    "category": "Node",
+    "notes": "1W (30dBm) USB LoRa stick with LNA for improved RX \u2014 high-power USB mesh node",
+    "url": "https://muzi.works/products/nullhop-meshtoad-v1-5",
+    "price": "$34.99",
+    "image": ""
+  },
+  {
+    "name": "BME280 Temperature Humidity Barometric Pressure Sensor (2 Pack)",
+    "category": "Sensor",
+    "notes": "I2C, 3.3V/5V, auto-detected by Meshtastic telemetry module \u2014 most popular mesh sensor",
+    "asin": "B0FPPV8RY1",
+    "price": "$4.99",
+    "image": ""
+  },
+  {
+    "name": "BME680 Environment Sensor (Temp/Humidity/Pressure/VOC Gas)",
+    "category": "Sensor",
+    "notes": "I2C, auto-detected by Meshtastic \u2014 measures air quality (IAQ), gas resistance, temp, humidity, pressure",
+    "asin": "B0BZSPTS15",
+    "price": "$9.99",
+    "image": ""
+  },
+  {
+    "name": "BMP280 Barometric Pressure Temperature Sensor (2 Pack)",
+    "category": "Sensor",
+    "notes": "I2C, 3.3V/5V, auto-detected by Meshtastic \u2014 pressure + temp, no humidity",
+    "asin": "B08HT1X1S1",
+    "price": "$3.99",
+    "image": ""
+  },
+  {
+    "name": "SHT31 High Accuracy Temperature Humidity Sensor (3 Pack)",
+    "category": "Sensor",
+    "notes": "I2C 0x44, high accuracy +/-0.3C/+/-2% RH \u2014 Meshtastic telemetry supported",
+    "price": "$5.99",
+    "image": ""
+  },
+  {
+    "name": "INA219 Bidirectional Current/Voltage Sensor",
+    "category": "Sensor",
+    "notes": "I2C, measures up to 26V/3.2A \u2014 Meshtastic power monitoring telemetry",
+    "asin": "B01ICN5OAM",
+    "price": "$2.99",
+    "image": ""
+  },
+  {
+    "name": "INA260 Current/Voltage/Power Sensor",
+    "category": "Sensor",
+    "notes": "I2C, up to 36V/15A, integrated shunt \u2014 Meshtastic power monitoring",
+    "asin": "B0DG5JPDN1",
+    "price": "$9.99",
+    "image": ""
+  },
+  {
+    "name": "PMSA003I Particulate Matter PM2.5 Air Quality Sensor",
+    "category": "Sensor",
+    "notes": "I2C, measures PM1.0/PM2.5/PM10 \u2014 Meshtastic air quality telemetry",
+    "asin": "B0DGQNGG2M",
+    "price": "$24.99",
+    "image": ""
+  },
+  {
+    "name": "SCD41 CO2 Temperature Humidity Sensor",
+    "category": "Sensor",
+    "notes": "I2C, photoacoustic CO2 sensing 400-5000ppm + temp + humidity \u2014 indoor air quality",
+    "asin": "B0F1FWCY4P",
+    "price": "$34.99",
+    "image": ""
+  },
+  {
+    "name": "RAKwireless RAK1901 SHTC3 Temp/Humidity WisBlock Sensor",
+    "category": "Sensor",
+    "notes": "Plug-and-play WisBlock sensor module \u2014 zero soldering, auto-detected by Meshtastic",
+    "url": "https://store.rakwireless.com/products/rak1901-shtc3-temperature-humidity-sensor",
+    "price": "$4.60",
+    "image": ""
+  },
+  {
+    "name": "RAKwireless RAK1906 BME680 Environment WisBlock Sensor",
+    "category": "Sensor",
+    "notes": "WisBlock environment sensor \u2014 temp/humidity/pressure/gas, plug-and-play",
+    "url": "https://store.rakwireless.com/products/rak1906-bme680-environment-sensor",
+    "price": "$15.20",
+    "image": ""
+  },
+  {
+    "name": "Rokland 5.8dBi Meshtastic LoRa 915MHz Fiberglass Antenna",
+    "category": "Antenna",
+    "notes": "Outdoor omni, N-Male, fiberglass, weatherproof \u2014 popular Meshtastic antenna with cable kit options",
+    "url": "https://store.rokland.com/products/meshtastic-compatible-6-dbi-n-female-omni-outdoor-915-mhz-antenna-kit-with-6-10-or-15-cable-choice",
+    "price": "$34.99",
+    "image": ""
+  },
+  {
+    "name": "MESHTAC 4dBi Gooseneck Tactical Antenna 915MHz SMA",
+    "category": "Antenna",
+    "notes": "Flexible gooseneck SMA Male, 4dBi gain \u2014 portable tactical antenna for handhelds",
+    "url": "https://store.rokland.com/products/meshtac-gooseneck-tactical-antenna-4-dbi-gain-sma-male-915-mhz-flexible-for-meshtastic-lora",
+    "price": "$14.99",
+    "image": ""
+  },
+  {
+    "name": "Tupavco TP580 9dBi 900MHz Outdoor Antenna 52in",
+    "category": "Antenna",
+    "notes": "Omni-directional N-Female, 52in tall fiberglass, weatherproof \u2014 high gain for hilltop relays",
+    "asin": "B09KFX3Q5F",
+    "price": "$39.99",
+    "image": ""
+  },
+  {
+    "name": "10dBi 915MHz Whip Antenna 17cm SMA Male",
+    "category": "Antenna",
+    "notes": "Compact high-gain whip for portable nodes, SMA Male",
+    "asin": "B0DB5MJ3CZ",
+    "price": "$7.99",
+    "image": ""
+  },
+  {
+    "name": "WWVB 60KHz Atomic Clock Receiver Module",
+    "category": "Sensor",
+    "notes": "CME6005 IC, 60kHz NIST time signal receiver for Arduino/MCU \u2014 atomic time sync for mesh nodes (requires custom firmware)",
+    "asin": "B0GL4TKVM6",
+    "price": "$11.99",
+    "image": ""
+  }
+]
