@@ -103,8 +103,9 @@
       });
     }
 
-    // Parse URL for shared wishlist
+    // Initialize wishlist (localStorage persistence, event listeners)
     if (window.Wishlist) {
+      window.Wishlist.init(allItems);
       window.Wishlist.loadFromURL(allItems);
     }
   } catch (err) {
