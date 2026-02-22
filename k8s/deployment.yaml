@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ncmesh-parts
+  namespace: monitoring
+  labels:
+    app: ncmesh-parts
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ncmesh-parts
+  template:
+    metadata:
+      labels:
+        app: ncmesh-parts
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1001
+        runAsGroup: 1001
+        fsGroup: 1001
+      containers:
+        - name: ncmesh-parts
+          image: ncmesh-parts:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: http
+            - containerPort: 9090
+              name: health
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 9090
+            initialDelaySeconds: 5
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 9090
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ncmesh-parts
+  namespace: monitoring
+spec:
+  selector:
+    app: ncmesh-parts
+  ports:
+    - port: 3000
+      targetPort: 3000
+      name: http
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ncmesh-parts
+  namespace: monitoring
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`node-parts.paschal.ai`)
+      kind: Rule
+      services:
+        - name: ncmesh-parts
+          port: 3000
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ncmesh-parts-tls
+  namespace: monitoring
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`node-parts.paschal.ai`)
+      kind: Rule
+      services:
+        - name: ncmesh-parts
+          port: 3000
+  tls:
+    certResolver: letsencrypt

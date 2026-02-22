@@ -1,0 +1,23 @@
+{
+  "name": "ncmesh-parts-app",
+  "version": "2.0.0",
+  "description": "NC Mesh Meshtastic parts catalog",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/**/*.test.js",
+    "price-check": "node price-checker.js"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "cheerio": "^1.2.0",
+    "csv-parse": "^6.1.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "node-fetch": "^3.3.2",
+    "resend": "^4.0.0"
+  }
+}

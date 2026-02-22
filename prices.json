@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "name": "SenseCAP Card Tracker T1000-E for Meshtastic",
+      "price": 39.9,
+      "priceDisplay": "~$40",
+      "url": "https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html",
+      "source": "seeed",
+      "lastChecked": "2026-02-17T11:40:22.405Z",
+      "lastChanged": "2026-02-16T13:12:00.000Z"
+    },
+    {
+      "name": "Seeed SenseCAP P1-Pro Solar Meshtastic Node",
+      "price": 98.99,
+      "priceDisplay": "~$99",
+      "url": "https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html",
+      "source": "seeed",
+      "lastChecked": "2026-02-17T11:40:25.257Z",
+      "lastChanged": null
+    },
+    {
+      "name": "Heltec MeshPocket Meshtastic Node",
+      "price": 59,
+      "priceDisplay": "~$59",
+      "url": "https://heltec.org/project/meshpocket/",
+      "source": "heltec",
+      "lastChecked": "2026-02-17T11:40:27.966Z",
+      "lastChanged": "2026-02-16T13:14:42.030Z",
+      "notes": "Price from Heltec direct. Amazon resellers charge 2-3x."
+    },
+    {
+      "name": "LILYGO T-Deck Meshtastic Keyboard",
+      "price": 43.08,
+      "priceDisplay": "~$43",
+      "url": "https://lilygo.cc/products/t-deck",
+      "source": "lilygo",
+      "lastChecked": "2026-02-17T11:40:29.770Z",
+      "lastChanged": "2026-02-16T13:12:00.000Z"
+    },
+    {
+      "name": "RAK WisBlock Meshtastic Starter Kit",
+      "price": 24.99,
+      "priceDisplay": "~$25",
+      "url": "https://store.rakwireless.com/products/wisblock-meshtastic-starter-kit",
+      "source": "rakwireless",
+      "lastChecked": "2026-02-17T11:40:31.960Z",
+      "lastChanged": "2026-02-16T13:12:00.000Z"
+    },
+    {
+      "name": "Samsung 18650 Rechargeable Batteries (4-pack)",
+      "price": 13.99,
+      "priceDisplay": "$13.99",
+      "url": "https://www.amazon.com/s?k=samsung+18650+rechargeable+battery+4+pack",
+      "source": "amazon",
+      "lastChecked": "2026-02-17T11:40:33.933Z",
+      "lastChanged": "2026-02-17T11:40:33.933Z"
+    }
+  ],
+  "lastRun": "2026-02-17T11:40:36.448Z"
+}
