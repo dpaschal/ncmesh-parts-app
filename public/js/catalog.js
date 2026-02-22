@@ -137,20 +137,28 @@ window.Catalog = (function () {
     // Image / category hero
     var imageDiv = document.createElement('div');
     imageDiv.className = 'card-image';
-    if (item.asin) {
+    if (item.imageUrl) {
+      // Direct Amazon image URL from ASIN map
       var img = document.createElement('img');
-      img.src = '/api/images/' + encodeURIComponent(item.asin);
-      img.alt = escapeHtml(item.item);
+      img.src = item.imageUrl;
+      img.alt = item.item;
       img.loading = 'lazy';
       img.onerror = function () {
         this.onerror = null;
-        this.src = '/img/placeholder.svg';
+        // Fall back to category emoji hero on image load failure
+        this.remove();
+        imageDiv.style.background = 'linear-gradient(135deg, ' + (info.color || '#666') + '30, ' + (info.color || '#666') + '18)';
+        imageDiv.style.borderBottom = '2px solid ' + (info.color || '#666') + '55';
+        var fallback = document.createElement('span');
+        fallback.className = 'card-image-emoji';
+        fallback.textContent = info.emoji || '\uD83D\uDCE6';
+        imageDiv.appendChild(fallback);
       };
       imageDiv.appendChild(img);
     } else {
       // Category-colored hero with large emoji
-      imageDiv.style.background = 'linear-gradient(135deg, ' + (info.color || '#666') + '22, ' + (info.color || '#666') + '44)';
-      imageDiv.style.borderBottom = '2px solid ' + (info.color || '#666') + '66';
+      imageDiv.style.background = 'linear-gradient(135deg, ' + (info.color || '#666') + '30, ' + (info.color || '#666') + '18)';
+      imageDiv.style.borderBottom = '2px solid ' + (info.color || '#666') + '55';
       var emojiSpan = document.createElement('span');
       emojiSpan.className = 'card-image-emoji';
       emojiSpan.textContent = info.emoji || '\uD83D\uDCE6';
@@ -167,20 +175,20 @@ window.Catalog = (function () {
     var catSpan = document.createElement('span');
     catSpan.className = 'card-category';
     catSpan.style.setProperty('--cat-color', info.color);
-    catSpan.textContent = info.emoji + ' ' + escapeHtml(item.category);
+    catSpan.textContent = info.emoji + ' ' + item.category;
     body.appendChild(catSpan);
 
     // Title
     var title = document.createElement('h3');
     title.className = 'card-title';
-    title.textContent = escapeHtml(item.item);
+    title.textContent = item.item;
     body.appendChild(title);
 
     // Price (only if exists and isn't '-')
     if (displayPrice) {
       var priceSpan = document.createElement('span');
       priceSpan.className = 'card-price';
-      priceSpan.textContent = escapeHtml(displayPrice);
+      priceSpan.textContent = displayPrice;
       body.appendChild(priceSpan);
     }
 
@@ -188,7 +196,7 @@ window.Catalog = (function () {
     if (item.notes) {
       var notesP = document.createElement('p');
       notesP.className = 'card-notes';
-      notesP.textContent = escapeHtml(item.notes);
+      notesP.textContent = item.notes;
       body.appendChild(notesP);
     }
 
@@ -211,7 +219,18 @@ window.Catalog = (function () {
     buyLink.target = '_blank';
     buyLink.rel = 'noopener noreferrer';
     buyLink.className = 'btn btn-buy';
-    buyLink.textContent = 'Buy on Amazon';
+    var url = item.amazonUrl || '';
+    if (url.indexOf('amazon.com') !== -1) {
+      buyLink.textContent = 'Buy on Amazon';
+    } else if (url.indexOf('seeedstudio.com') !== -1) {
+      buyLink.textContent = 'Buy on Seeed';
+    } else if (url.indexOf('rakwireless.com') !== -1) {
+      buyLink.textContent = 'Buy on RAK';
+    } else if (url.indexOf('uniteng.com') !== -1) {
+      buyLink.textContent = 'Buy on Unit Eng';
+    } else {
+      buyLink.textContent = 'View Product';
+    }
     actions.appendChild(buyLink);
 
     // Compare button
@@ -240,7 +259,75 @@ window.Catalog = (function () {
 
     card.appendChild(actions);
 
+    // Add-ons slide-out panel
+    if (item.addons && item.addons.length > 0) {
+      var addonsPanel = document.createElement('div');
+      addonsPanel.className = 'card-addons';
+
+      var addonsLabel = document.createElement('div');
+      addonsLabel.className = 'card-addons-label';
+      addonsLabel.textContent = 'Recommended Add-on';
+      addonsPanel.appendChild(addonsLabel);
+
+      // Store addon IDs for resolution after render
+      addonsPanel.setAttribute('data-addon-ids', JSON.stringify(item.addons));
+
+      card.appendChild(addonsPanel);
+      card.classList.add('has-addons');
+    }
+
     return card;
+  }
+
+  /**
+   * Resolve add-on panels after all items are rendered.
+   * Finds referenced items by ID and populates the slide-out content.
+   */
+  function resolveAddons() {
+    var panels = document.querySelectorAll('.card-addons[data-addon-ids]');
+    panels.forEach(function (panel) {
+      var ids = JSON.parse(panel.getAttribute('data-addon-ids') || '[]');
+      ids.forEach(function (addonId) {
+        var addonItem = null;
+        for (var i = 0; i < allItems.length; i++) {
+          if (allItems[i].id === addonId) { addonItem = allItems[i]; break; }
+        }
+        if (!addonItem) return;
+
+        var row = document.createElement('a');
+        row.className = 'card-addon-item';
+        row.href = addonItem.amazonUrl || '#';
+        row.target = '_blank';
+        row.rel = 'noopener noreferrer';
+
+        if (addonItem.imageUrl) {
+          var thumb = document.createElement('img');
+          thumb.src = addonItem.imageUrl;
+          thumb.alt = addonItem.item;
+          thumb.className = 'card-addon-thumb';
+          thumb.loading = 'lazy';
+          row.appendChild(thumb);
+        }
+
+        var addonText = document.createElement('div');
+        addonText.className = 'card-addon-text';
+
+        var addonName = document.createElement('span');
+        addonName.className = 'card-addon-name';
+        addonName.textContent = addonItem.item;
+        addonText.appendChild(addonName);
+
+        if (addonItem.price) {
+          var addonPrice = document.createElement('span');
+          addonPrice.className = 'card-addon-price';
+          addonPrice.textContent = addonItem.price;
+          addonText.appendChild(addonPrice);
+        }
+
+        row.appendChild(addonText);
+        panel.appendChild(row);
+      });
+    });
   }
 
   // ── Rendering ──
@@ -257,6 +344,9 @@ window.Catalog = (function () {
       fragment.appendChild(createCard(item));
     });
     gridEl.appendChild(fragment);
+
+    // Resolve add-on references
+    resolveAddons();
 
     // Update search count
     if (searchCountEl) {

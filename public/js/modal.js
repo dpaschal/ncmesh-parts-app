@@ -74,7 +74,7 @@ window.ProductModal = (function () {
     // Image
     var img = document.createElement('img');
     img.src = getImageSrc(item);
-    img.alt = escapeHtml(item.item);
+    img.alt = item.item;
     img.loading = 'lazy';
     img.style.cssText = 'width:48px;height:48px;object-fit:contain;border-radius:6px;flex-shrink:0;background:rgba(255,255,255,0.04);';
     img.onerror = function () {
@@ -89,13 +89,13 @@ window.ProductModal = (function () {
 
     var name = document.createElement('div');
     name.style.cssText = 'font-size:0.82rem;font-weight:600;color:var(--text-bright);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;';
-    name.textContent = escapeHtml(item.item);
+    name.textContent = item.item;
     textDiv.appendChild(name);
 
     if (item.price && item.price !== '-') {
       var price = document.createElement('div');
       price.style.cssText = 'font-size:0.78rem;color:var(--green);margin-top:0.15rem;';
-      price.textContent = escapeHtml(item.price);
+      price.textContent = item.price;
       textDiv.appendChild(price);
     }
 
@@ -133,7 +133,7 @@ window.ProductModal = (function () {
     imageWrap.style.cssText = 'text-align:center;margin-bottom:1.5rem;';
     var img = document.createElement('img');
     img.src = getImageSrc(item);
-    img.alt = escapeHtml(item.item);
+    img.alt = item.item;
     img.style.cssText = 'max-width:100%;max-height:280px;object-fit:contain;border-radius:var(--radius);background:rgba(255,255,255,0.04);';
     img.onerror = function () {
       this.onerror = null;
@@ -145,20 +145,20 @@ window.ProductModal = (function () {
     // ── Product name ──
     var h2 = document.createElement('h2');
     h2.style.cssText = 'font-size:1.3rem;font-weight:700;color:var(--text-bright);margin-bottom:0.75rem;';
-    h2.textContent = escapeHtml(item.item);
+    h2.textContent = item.item;
     frag.appendChild(h2);
 
     // ── Category badge ──
     var catBadge = document.createElement('span');
     catBadge.style.cssText = 'display:inline-block;padding:0.25rem 0.75rem;border-radius:var(--radius-full);font-size:0.78rem;font-weight:600;margin-bottom:1rem;background:' + escapeHtml(info.color) + '22;color:' + escapeHtml(info.color) + ';border:1px solid ' + escapeHtml(info.color) + '44;';
-    catBadge.textContent = info.emoji + ' ' + escapeHtml(item.category);
+    catBadge.textContent = info.emoji + ' ' + item.category;
     frag.appendChild(catBadge);
 
     // ── Price ──
     if (item.price && item.price !== '-') {
       var priceDiv = document.createElement('div');
       priceDiv.style.cssText = 'font-size:1.5rem;font-weight:700;color:var(--green);margin:0.75rem 0 1rem;';
-      priceDiv.textContent = escapeHtml(item.price);
+      priceDiv.textContent = item.price;
       frag.appendChild(priceDiv);
     }
 
@@ -166,7 +166,7 @@ window.ProductModal = (function () {
     if (item.notes) {
       var notesP = document.createElement('p');
       notesP.style.cssText = 'color:var(--text);line-height:1.7;margin-bottom:1.25rem;font-size:0.92rem;';
-      notesP.textContent = escapeHtml(item.notes);
+      notesP.textContent = item.notes;
       frag.appendChild(notesP);
     }
 
@@ -181,7 +181,18 @@ window.ProductModal = (function () {
     buyBtn.rel = 'noopener noreferrer';
     buyBtn.className = 'btn btn-primary';
     buyBtn.style.cssText = 'flex:1;min-width:180px;padding:0.7rem 1.5rem;font-size:0.95rem;font-weight:700;text-decoration:none;';
-    buyBtn.textContent = 'Buy on Amazon';
+    var buyUrl = item.amazonUrl || '';
+    if (buyUrl.indexOf('amazon.com') !== -1) {
+      buyBtn.textContent = 'Buy on Amazon';
+    } else if (buyUrl.indexOf('seeedstudio.com') !== -1) {
+      buyBtn.textContent = 'Buy on Seeed';
+    } else if (buyUrl.indexOf('rakwireless.com') !== -1) {
+      buyBtn.textContent = 'Buy on RAK';
+    } else if (buyUrl.indexOf('uniteng.com') !== -1) {
+      buyBtn.textContent = 'Buy on Unit Eng';
+    } else {
+      buyBtn.textContent = 'View Product';
+    }
     actionsRow.appendChild(buyBtn);
 
     // Compare button
