@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const { initDB } = require('./db');
 const partsRoutes = require('./routes/parts');
+const reviewsRoutes = require('./routes/reviews');
 
 /**
  * Start the application. Returns a promise resolving to
@@ -16,7 +17,7 @@ async function start() {
   const DB_PATH = process.env.DB_PATH || undefined;
 
   // Initialize database
-  initDB(DB_PATH);
+  const db = initDB(DB_PATH);
 
   const app = express();
 
@@ -68,6 +69,7 @@ async function start() {
 
   // Mount API routes
   partsRoutes.mount(app);
+  reviewsRoutes.mount(app, db);
 
   // Fallback: serve index.html for any unmatched GET request (SPA support)
   // Express 5 requires named wildcard parameters
