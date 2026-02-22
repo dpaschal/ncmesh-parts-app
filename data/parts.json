@@ -876,5 +876,18 @@
       "github": "https://github.com/wehooper4/Meshtastic-Hardware/tree/main/XaioSeries/SolarXaio",
       "website": "https://ncmesh.net"
     }
+  },
+  {
+    "name": "Baymesh 915MHz Cavity Band Pass Filter",
+    "category": "Antenna",
+    "notes": "Hand-tuned cavity BPF for 902-928MHz LoRa, ~0.4-1.2dB insertion loss, 60+dB out-of-band rejection \u2014 outperforms commercial filters. Available in 3/4/5-cavity variants. Each unit shipped with individual VNA test results.",
+    "url": "https://discord.com/users/801971745141555210",
+    "price": "Contact on Discord",
+    "image": "/images/community/baymesh-filter.jpeg",
+    "community": true,
+    "communityMaker": "baymesh5",
+    "communityLinks": {
+      "discord": "https://discord.com/users/801971745141555210"
+    }
   }
 ]
