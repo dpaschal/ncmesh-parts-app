@@ -1,0 +1,61 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ncmesh-price-checker
+  namespace: monitoring
+  labels:
+    app: ncmesh-parts
+    component: price-checker
+spec:
+  schedule: "0 */6 * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 900
+      backoffLimit: 2
+      template:
+        metadata:
+          labels:
+            app: ncmesh-parts
+            component: price-checker
+        spec:
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1001
+            runAsGroup: 1001
+            fsGroup: 1001
+          containers:
+            - name: price-checker
+              image: ncmesh-parts:v2
+              imagePullPolicy: IfNotPresent
+              command: ["node", "price-checker.js"]
+              env:
+                - name: RESEND_API_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: ncmesh-parts-secrets
+                      key: resend-api-key
+                      optional: true
+              volumeMounts:
+                - name: data
+                  mountPath: /app/data
+              resources:
+                requests:
+                  cpu: 50m
+                  memory: 64Mi
+                limits:
+                  cpu: 200m
+                  memory: 192Mi
+              securityContext:
+                allowPrivilegeEscalation: false
+                capabilities:
+                  drop:
+                    - ALL
+          volumes:
+            - name: data
+              hostPath:
+                path: /work/ai/ncmesh-parts-data
+                type: DirectoryOrCreate
+          restartPolicy: Never
