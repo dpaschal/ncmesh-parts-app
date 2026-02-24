@@ -15,7 +15,6 @@ const { Resend } = require('resend');
 const DATA_DIR = path.join(__dirname, 'data');
 const PARTS_FILE = path.join(DATA_DIR, 'parts.json');
 const PRICES_FILE = path.join(DATA_DIR, 'prices.json');
-const HOSTPATH_DIR = '/work/ai/ncmesh-parts-data';
 const AFFILIATE_TAG = 'dpaschal26-20';
 
 const USER_AGENTS = [
@@ -141,7 +140,7 @@ function buildProductList(partsData, existingPrices) {
 
 async function fetchPage(url) {
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 15000);
+  const timeout = setTimeout(() => controller.abort(), 8000);
   try {
     const res = await fetch(url, {
       headers: {
@@ -466,31 +465,9 @@ async function main() {
     const synced = syncBackToParts(partsData, changedProducts);
     fs.writeFileSync(PARTS_FILE, JSON.stringify(partsData, null, 2) + '\n');
     console.log(`📝 Synced ${synced} price changes back to parts.json`);
-
-    // Copy to hostPath so the live site picks it up
-    const hostPathParts = path.join(HOSTPATH_DIR, 'parts.json');
-    try {
-      fs.copyFileSync(PARTS_FILE, hostPathParts);
-      console.log(`📋 Copied parts.json to ${hostPathParts}`);
-    } catch (err) {
-      console.log(`⚠️  Could not copy to hostPath: ${err.message}`);
-    }
-
-    // Also copy prices.json to hostPath
-    const hostPathPrices = path.join(HOSTPATH_DIR, 'prices.json');
-    try {
-      fs.copyFileSync(PRICES_FILE, hostPathPrices);
-    } catch { /* non-critical */ }
-
     console.log('\nPRICES_CHANGED');
   } else {
     console.log('\n✅ No price changes detected');
-
-    // Still copy prices.json to hostPath (for lastRun update)
-    const hostPathPrices = path.join(HOSTPATH_DIR, 'prices.json');
-    try {
-      fs.copyFileSync(PRICES_FILE, hostPathPrices);
-    } catch { /* non-critical */ }
   }
 }
 
